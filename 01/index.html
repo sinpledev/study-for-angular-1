@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div ng-controller="Controller">
+      <div class="">
+        <input type="text" class="name" ng-model="data.name">
+        <input type="text" class="name" ng-model="data.age">
+      </div>
+      <div class="">
+        <span>name: </span>
+        <span>{{data.name}}</span>
+      </div>
+      <div class="">
+        {{data | json}}
+      </div>
+      <div class="">
+        {{data.number | currency:"￦":7}}
+      </div>
+      <div class="">
+        <ul ng-repeat="e in arr">
+          <li>{{e.name}}</li>
+          <li>{{e.age}}</li>
+        </ul>
+      </div>
+      <div class="">
+        <select name="" id="" ng-options="e.name as e.name for e in arr" ng-model="aaaa"></select>
+        <div class="">{{aaaa}}</div>
+      </div>
+      <div class="">
+        <select name="" id="" ng-options="e for e in arr2" ng-model="bbbb"></select>
+        <div class="">{{bbbb}}</div>
+      </div>
+      <div class="">
+        <button ng-click="add()">추가</button>
+      </div>
+    </div>
+    <script data-require="angular.js@1.0.8" data-semver="1.0.8" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.0.8/angular.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+
+</html>
